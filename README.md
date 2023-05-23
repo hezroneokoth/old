@@ -3,15 +3,7 @@
 Herein is an ALX SE step-by-step process to create a simple shell program based on a series of tasks.
 It is a group project by Hezrone & Boitumelo and challenges our knowledge and undestanding of the basics of programming and of C.
 
-Resources
-1. Unix shell
-2. Thompson shell
-3. Ken Thompson
-4. Everything you need to know to start coding your own shell concept page
-man or help:
-sh (Run sh too)
-
-Learning Goals of the Project
+LEARNING GOALS OF THE PROJECT
 Explain to anyone:
 1. Who designed & implemented the original Unix OS?
 2. Who wrote the 1st version of the UNIX shell?
@@ -27,25 +19,13 @@ Explain to anyone:
 12. How to suspend the execution of a process until one of its children terminates
 13. What is EOF?
 
-Plagiarism
-You are tasked to come up with solutions for the tasks below yourselves to meet the learning goals
-You will NOT be able to meet the objectives of this or any following projects by copying & pasting someone else’s work
-You are NOT allowed to publish any content of this project
+PLAGIARISM
+We are tasked to come up with solutions for the tasks below yourselves to meet the learning goals
+We will NOT be able to meet the objectives of this or any following projects by copying & pasting someone else’s work
+We are NOT allowed to publish any content of this project
 ANY form of plagiarism is strictly forbidden and will result in removal from the program
 
-Requirements
-Allowed editors are vi, vim & emacs
-All files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All files should end with a new line
-A README.md file at the root of the folder of the project is mandatory
-Use Betty writing style
-The shell should not have any memory leaks
-No more than 5 functions in each file
-Use system calls only when you need to (why?)
-A README with a description of the project
-An AUTHORS file at the root of your repo, listing individuals who contributed content to the project
-
-Output
+OUTPUT
 Unless specified otherwise, our program must have the same output as sh (/bin/sh) as well as the exact same error output. The only diff e is when we print an error, the name of the program must be equivalent to your argv[0].
 Ex of error with sh:
 $ echo "qwerty" | /bin/sh
@@ -61,7 +41,7 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 
-Heres a list of allowed functions & system calls:
+ALLOWED FUNCTIONS AND SYSTEM CALLS
 access (man 2 access)
 chdir (man 2 chdir)
 close (man 2 close)
@@ -92,33 +72,11 @@ wait (man 2 wait)
 waitpid (man 2 waitpid)
 wait3 (man 2 wait3)
 wait4 (man 2 wait4)
-write (man 2 write)
+write (man 2 write
 
-Testing
-Our shell should work like this in interactive mode:
-$ ./hsh
-($) /bin/ls
-hsh main.c shell.c
-($)
-($) exit
-$
-
-But also this way in non-interactive mode:
-$ echo "/bin/ls" | ./hsh
-hsh main.c shell.c test_ls_2
-$
-$ cat test_ls_2
-/bin/ls
-/bin/ls
-$
-$ cat test_ls_2 | ./hsh
-hsh main.c shell.c test_ls_2
-hsh main.c shell.c test_ls_2
-$
-
-Contributing
+CONTRIBUTORS
 As you indicated in the AUTHORS file, Boitumelo Rakobeloa and Hezrone Okoth are the sole contributors to this simple shell. We appreciate any requests whatsoever but we do not, at this time, require any additional functionalities.
 
-license
+lICENSE
 These codes are in the public domain but should not be published in any other platform.
 You are allowed to use or modify it anyway you would like but not in any way that infringes on copyright.

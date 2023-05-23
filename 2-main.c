@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * main - program for the UNIX command line interpreter.
+ * main - function for UNIX CLI that also handles args
  *
  * Return: EXIT_SUCCESS on success
  */
 int main(void)
 {
 	char *line;
+	char *arguments[MAX_ARGUMENTS];
 
 	signal(SIGINT, sigint_handler);
 	while (1)
@@ -22,7 +23,8 @@ int main(void)
 		}
 		if (line[0] != '\0')
 		{
-			execute_command(line);
+			int argc = create_arguments(line, arguments, MAX_ARGUMENTS);
+			execute_command(arguments[0], arguments);
 		}
 		free(line);
 	}
