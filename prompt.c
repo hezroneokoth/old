@@ -1,8 +1,8 @@
-#include <main.h>
+#include "main.h"
 #include <unistd.h>
 #include <stdio.h>
 /**
- * prompt - the prompt for the simple shell
+ * prompt - the prompt for the simple shell.
  *
  * Return: Always 0
  */
