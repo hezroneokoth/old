@@ -1,6 +1,5 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
+
 /**
  * prompt - the prompt for the simple shell.
  *

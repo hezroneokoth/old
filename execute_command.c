@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <unistd.h>
 
 /**
  * execute_command - execute command by forking a child process & using execve.

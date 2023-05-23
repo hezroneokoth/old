@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <unistd.h>
+#include "main.h"
+
 /**
  * read_line - Read input line in SO
  *
@@ -44,7 +44,7 @@ char *read_line(void)
 		exit(EXIT_FAILURE);
 	} else
 	{
-		free(line);
 		return (NULL);
 	}
+	free(line);
 }
