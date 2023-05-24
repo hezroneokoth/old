@@ -1,5 +1,6 @@
 #ifndef SHELL_H
 #define SHELL_H
+
 #define MAX_ARGS 100
 #define PATH_DELIMITER ':'
 #define MAX_TOKENS 100
@@ -9,12 +10,50 @@
 #include <errno.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <signal.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <limits.h>
 #include <fcntl.h>
 
+typedef struct builtin {
+        char *type;
+        int (*func)(info_t *);
+} builtin_table;
+
+typedef struct liststr {
+	int num;
+	char *str;
+	struct liststr *next;
+} list_t;
+
+typedef struct passinfo {
+	char *arg;
+	char **argv;
+	char *path;
+	int argc;
+	unsigned int line_count;
+	int err_num;
+	int linecount_flag;
+	char *fname;
+	list_t *env;
+	list_t *history;
+	list_t *alias;
+	char **environ;
+	int env_changed;
+	int status;
+	char **cmd_buf;
+	int cmd_buf_type;
+	int readfd;
+	int histcount;
+} info_t;
+
+int hsh(info_t *, char **);
+int find_builtin(info_t *);
+void find_cmd(info_t *);
+void fork_cmd(info_t *);
 int the_exit(char **command_token_array);
 char **strtow(char *str, char *d);
 char **strtow2(char *str, char d);
@@ -55,5 +94,6 @@ int _myenv(info_t *info);
 int create_arguments(char *line, char **arguments, int max_arguments);
 int execute_command(char *command, char **arguments);
 int main(void);
+int main(__attribute((unused)) int ac, __attribute((unused)) char **arvs, __attribute((unused)) char **envp);
 
 #endif
