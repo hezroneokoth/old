@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * create_arguments - turns command line into args by splitting them
  * @line: command to split

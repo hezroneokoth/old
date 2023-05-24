@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * main - function for UNIX CLI that also handles args
@@ -24,6 +24,7 @@ int main(void)
 		if (line[0] != '\0')
 		{
 			int argc = create_arguments(line, arguments, MAX_ARGUMENTS);
+
 			execute_command(arguments[0], arguments);
 		}
 		free(line);

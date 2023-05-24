@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * sigint_handler - handle the SIGINT signal moreso Ctrl+C
  * @signum: The signal number

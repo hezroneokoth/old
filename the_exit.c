@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * the_exit - handles shell exit built-in command
  * @command_token_array: token arrays containing the command

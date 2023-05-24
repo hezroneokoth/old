@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * our_getline - our own getline function to read input line
  *
