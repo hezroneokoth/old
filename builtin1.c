@@ -35,7 +35,7 @@ int _myalias(info_t *info)
 }
 
 /**
- * myhistory - displays the history list, with each command on a separate line
+ * _myhistory - displays the history list, with each command on a separate line
  *              preceded by line numbers starting at 0.
  * @info: A structure that holds possible arguments. It is used to preserve
  *        the function prototype consistently.

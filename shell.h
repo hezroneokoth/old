@@ -2,15 +2,18 @@
 #define SHELL_H
 #define MAX_ARGS 100
 #define PATH_DELIMITER ':'
-#define ARG_DELIMITER ' '
+#define MAX_TOKENS 100
+#define BUFFER_SIZE 1024
 
 #include <stdio.h>
+#include <errno.h>
 #include <unistd.h>
 #include <sys/wait.h>
 #include <signal.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <fcntl.h>
 
 int the_exit(char **command_token_array);
 char **strtow(char *str, char *d);
