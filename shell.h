@@ -83,9 +83,6 @@ typedef struct liststr
 } list_t;
 
 int hsh(info_t *, char **);
-int find_builtin(info_t *);
-void find_cmd(info_t *);
-void fork_cmd(info_t *);
 int the_exit(char **command_token_array);
 char **strtow(char *str, char *d);
 char **strtow2(char *str, char d);
@@ -124,6 +121,7 @@ int builtin_handler(char **command_token_array);
 char *_getenv(info_t *info, const char *name);
 int _myenv(info_t *info);
 int create_arguments(char *line, char **arguments, int max_arguments);
+int fork(char *command, char **command_token_array)
 int execute_command(char *command, char **arguments);
 
 #endif
