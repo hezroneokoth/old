@@ -18,6 +18,25 @@
 #include <limits.h>
 #include <fcntl.h>
 
+/**
+ * struct passinfo - short description
+ * @argv: first
+ * @path: second
+ * @argc: third
+ * @line_count: fourth
+ * @err_num: fifth
+ * @arg: sixth
+ * @linecount_flag: seventh
+ * @status: 8th
+ * @fname: 9th
+ * @env: 10th
+ * @history: 11th
+ * @alias: 12th
+ * @environ: 13th
+ * @env_changed: 14th
+ * @readfd: 15th
+ * @histcount: 16th
+ */
 typedef struct passinfo
 {
 	char **argv;
@@ -27,7 +46,6 @@ typedef struct passinfo
 	int err_num;
 	char *arg;
 	int linecount_flag;
-	char **cmd_buf;
 	char *fname;
 	list_t *env;
 	list_t *history;
@@ -35,16 +53,29 @@ typedef struct passinfo
 	char **environ;
 	int env_changed;
 	int status;
-	int cmd_buf_type;
 	int readfd;
 	int histcount;
 } info_t;
-typedef struct builtin {
-        char *type;
-        int (*func)(info_t *);
+/**
+ * struct builtin_command - descrption
+ * @name: 1st
+ * @function: 2nd
+ */
+struct builtin_command
+{
+	char *name;
+	int (*function)(char **command_token_array);
 } builtin_command;
 
-typedef struct liststr {
+/**
+ * struct liststr - descrption
+ * @num: 1st
+ * @type: 2nd
+ * @next: 3rd
+ * @str: 4th
+ */
+typedef struct liststr
+{
 	int num;
 	char type;
 	char *str;

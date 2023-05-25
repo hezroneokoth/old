@@ -35,7 +35,7 @@ char *read_line(void)
 				write(STDERR_FILENO, "Error: failure on realloc\n", 26);
 				exit(EXIT_FAILURE);
 			}
-			line = new line;
+			line = new_line;
 		}
 	}
 	if (read_size == -1)

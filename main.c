@@ -31,19 +31,21 @@ int main(__attribute((unused)) int ac, __attribute((unused)) char **arvs,
 			status = 0;
 		else if (checks_builtin(command_token_array))
 		{
-			if (builtin_handler(command_token_array) == EXIT_CODE)
+			if (builtin_handler(command_token_array) == EXIT)
 				for (int i = 0; i < count_token; i++)
 					free(command_token_array[i]), free(input), exit(status);
-		}  else
+		} else
 		{
 			char *command = command_token_array[0];
-				if (access(command, X_OK) == 0)
+
+			if (access(command, X_OK) == 0)
 				status = execute_command(command, command_token_array);
 			else
-				write(STDERR_FILENO, command, command, strlen(command));
-				write(STDERR_FILENO ": command not found\n", 20);
-		}
-		for (int i = 0; i < count_token; i++)
+				write(STDERR_FILENO, command, strlen(command));
+			write(STDERR_FILENO ": command not found\n", 20);
+		} else
+			int i = 0;
+		i < count_token; i++
 			free(command_token_array[i]);
 		free(input);
 	}

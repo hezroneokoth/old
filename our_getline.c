@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
  * our_getline - our own getline function to read input line
- *
  * @input: pointer to input string
  * @bytes: pointer to size of allocated mem
  * @status: error exit status
+ *
  * Return: the no of chars read from input
  */
 ssize_t our_getline(char **input, size_t *bytes, int status)
@@ -38,7 +38,7 @@ ssize_t our_getline(char **input, size_t *bytes, int status)
 			break;
 	}
 	(*input)[number_of_chars_read] = '\0';
-	if (buffer_size == 0
+	if (buffer_size == 0 ||
 			(buffer_size < sizeof(buffer) && buffer_index >= buffer_size))
 	{
 		free(*input);
