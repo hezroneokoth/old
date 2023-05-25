@@ -5,6 +5,7 @@
 #define PATH_DELIMITER ':'
 #define MAX_TOKENS 100
 #define BUFFER_SIZE 1024
+#define EXIT_CODE 1080
 
 #include <stdio.h>
 #include <errno.h>
