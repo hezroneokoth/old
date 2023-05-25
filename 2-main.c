@@ -8,7 +8,7 @@
 int main(void)
 {
 	char *line;
-	char *arguments[MAX_ARGUMENTS];
+	char *arguments[MAX_ARGS];
 
 	signal(SIGINT, sigint_handler);
 	while (1)

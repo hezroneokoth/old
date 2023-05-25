@@ -18,25 +18,16 @@
 #include <limits.h>
 #include <fcntl.h>
 
-typedef struct builtin {
-        char *type;
-        int (*func)(info_t *);
-} builtin_table;
-
-typedef struct liststr {
-	int num;
-	char *str;
-	struct liststr *next;
-} list_t;
-
-typedef struct passinfo {
-	char *arg;
+typedef struct passinfo
+{
 	char **argv;
 	char *path;
 	int argc;
 	unsigned int line_count;
 	int err_num;
+	char *arg;
 	int linecount_flag;
+	char **cmd_buf;
 	char *fname;
 	list_t *env;
 	list_t *history;
@@ -44,11 +35,21 @@ typedef struct passinfo {
 	char **environ;
 	int env_changed;
 	int status;
-	char **cmd_buf;
 	int cmd_buf_type;
 	int readfd;
 	int histcount;
 } info_t;
+typedef struct builtin {
+        char *type;
+        int (*func)(info_t *);
+} builtin_command;
+
+typedef struct liststr {
+	int num;
+	char type;
+	char *str;
+	struct liststr *next;
+} list_t;
 
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
@@ -93,7 +94,5 @@ char *_getenv(info_t *info, const char *name);
 int _myenv(info_t *info);
 int create_arguments(char *line, char **arguments, int max_arguments);
 int execute_command(char *command, char **arguments);
-int main(void);
-int main(__attribute((unused)) int ac, __attribute((unused)) char **arvs, __attribute((unused)) char **envp);
 
 #endif

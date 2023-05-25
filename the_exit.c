@@ -11,7 +11,7 @@ int the_exit(char **command_token_array)
 	{
 		int exit_status = atoi(command_token_array[1]);
 
-		exit(exit_status)
+		exit(exit_status);
 	}
 	else
 	{
