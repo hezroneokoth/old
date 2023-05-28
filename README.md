@@ -1,9 +1,10 @@
-0x16. C - A SIMPLE SHELL PAIR PROJECT
+0x16. C - A SIMPLE SHELL GROUP PROJECT
 
-Herein is an ALX SE step-by-step process to create a simple shell program based on a series of tasks.
+This is a ALX SE step-by-step process to create a simple shell program based on a series of tasks.
 It is a group project by Hezrone & Boitumelo and challenges our knowledge and undestanding of the basics of programming and of C.
 
 LEARNING GOALS OF THE PROJECT
+
 Explain to anyone:
 1. Who designed & implemented the original Unix OS?
 2. Who wrote the 1st version of the UNIX shell?
@@ -20,12 +21,14 @@ Explain to anyone:
 13. What is EOF?
 
 PLAGIARISM
+
 We are tasked to come up with solutions for the tasks below yourselves to meet the learning goals
 We will NOT be able to meet the objectives of this or any following projects by copying & pasting someone else’s work
 We are NOT allowed to publish any content of this project
 ANY form of plagiarism is strictly forbidden and will result in removal from the program
 
 OUTPUT
+
 Unless specified otherwise, our program must have the same output as sh (/bin/sh) as well as the exact same error output. The only diff e is when we print an error, the name of the program must be equivalent to your argv[0].
 Ex of error with sh:
 $ echo "qwerty" | /bin/sh
@@ -41,7 +44,8 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 
-ALLOWED FUNCTIONS AND SYSTEM CALLS
+ALLOWED FUNCTIONS & SYSTEM CALLS
+
 access (man 2 access)
 chdir (man 2 chdir)
 close (man 2 close)
@@ -75,8 +79,9 @@ wait4 (man 2 wait4)
 write (man 2 write
 
 CONTRIBUTORS
+
 As you indicated in the AUTHORS file, Boitumelo Rakobeloa and Hezrone Okoth are the sole contributors to this simple shell. We appreciate any requests whatsoever but we do not, at this time, require any additional functionalities.
 
-lICENSE
-These codes are in the public domain but should not be published in any other platform.
-You are allowed to use or modify it anyway you would like but not in any way that infringes on copyright.
+LICENSE
+
+The PROJECT is in the public domain but should not be published in any other platform. You are, however, allowed to use or modify it anyway you like but not in a way that infringes on copyright.
